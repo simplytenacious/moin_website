@@ -1,4 +1,7 @@
 {
+    "components/jquery": {
+        "version": "3.3.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -367,6 +370,9 @@
     },
     "symfony/yaml": {
         "version": "v3.4.22"
+    },
+    "twbs/bootstrap": {
+        "version": "v4.2.1"
     },
     "twig/twig": {
         "version": "v2.6.2"

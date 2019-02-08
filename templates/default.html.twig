@@ -15,10 +15,15 @@
                 {% block menu %}{% include 'menu/menubar_head.html.twig' %}{% endblock %}
             </div>
             <div id="content">
-                {% block main %}{% include 'pages/main.html.twig' %}{% endblock %}
+                <div data-spy="scroll" data-target="#menubar_head" data-offset="0">
+                    {% block main %}{% include 'pages/main.html.twig' %}{% endblock %}
+                    {% block team %}{% include 'pages/team.html.twig' %}{% endblock %}
+                    {% block games %}{% include 'pages/games.html.twig' %}{% endblock %}
+                    {% block events %}{% include 'pages/events.html.twig' %}{% endblock %}
+                </div>
             </div>
             <div id="footer">
-                <span><sub>Made by MOIN</sub></span>
+                footer
             </div>
         {% endblock %}
         {% block javascripts %}

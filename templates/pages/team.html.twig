@@ -1,20 +1,20 @@
-<div id="team" class="frame">
-    <h1>Team</h1>
-    <div id="players">
-        {% if players is defined %}
-            {% for player in players %}
-                <div class="col-md-4">
-                    <div class="card">
+<div id="team" class="frame container-fluid">
+    <div id="players" class="col-md-12">
+        <h1>Team</h1>
+        <div class="row">
+            {% if players is defined %}
+                {% for player in players %}
+                    <div class="card col-md-4">
                         <div class="card-body">
                             <h5 class="card-title">{{ player.name }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ player.games }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Games: {{ player.games | default('all') }}</h6>
                             <p class="card-text">{{ player.bio }}</p>
-                            <a href="{{ player.imageFile }}" target="_blank" class="card-link"></a>
-                            <a href="{{ webroot }}/profile/{{ player.name }}" class="card-link">Profil</a>
+                            <a href="{{ player.imageFile | default('') }}" target="_blank" class="card-link"></a>
+                            <a href="{{ webroot | default('') }}/profile/{{ player.name }}" class="card-link">Profile</a>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 </div>
